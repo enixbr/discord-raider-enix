@@ -18,3 +18,4 @@
 ## You can easily install all of these by executing install.bat
 
 ### If you had any problem with Discord-Raider GUI, please send an issue post so i can check what's wrong and maybe fix it.
+##### > ( I am not responsible for anything that happens to your discord account while using this script. )
