@@ -1,7 +1,13 @@
 const editJsonFile = require('edit-json-file')
-const settings = editJsonFile('./utils/settings.json', {autosave: true})
-
 const fs = require("fs")
+
+if (!fs.existsSync('./utils/')) fs.mkdirSync('./utils');
+if (!fs.existsSync('./utils/settings.json')) fs.writeFileSync('./utils/settings.json', '{}')
+if (!fs.existsSync('./utils/tokens.json')) fs.writeFileSync('./utils/tokens.json', '{}')
+
+
+
+const settings = editJsonFile('./utils/settings.json', {autosave: true})
 
 const Discord = require("discord.js")
 
