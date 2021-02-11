@@ -5,9 +5,14 @@ if (!fs.existsSync('./utils/')) fs.mkdirSync('./utils');
 if (!fs.existsSync('./utils/settings.json')) fs.writeFileSync('./utils/settings.json', '{}')
 if (!fs.existsSync('./utils/tokens.json')) fs.writeFileSync('./utils/tokens.json', '{}')
 
-
-
 const settings = editJsonFile('./utils/settings.json', {autosave: true})
+const tokens2 = editJsonFile('./utils/tokens.json', {autosave: true})
+
+if (!tokens2.get("tokens")) tokens2.set("tokens", [])
+if (!settings.get("settings.username")) settings.set("settings.username", "")
+if (!settings.get("settings.username")) settings.set("settings.avatarBase64", "")
+if (!settings.get("settings.username")) settings.set("settings.backgroundColor", "")
+if (!settings.get("settings.username")) settings.set("settings.backgroundImageColor", "")
 
 const Discord = require("discord.js")
 
