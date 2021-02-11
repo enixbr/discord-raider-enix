@@ -11,7 +11,7 @@
 
 ## Requeriments
 - NodeJS (newest version if possible)
-- DiscordJS v11.5.1
+- DiscordJS v11.6.1
 - EditJSONFile v^1.5.0
 - Electron v^11.2.3
 - line-reader v^0.4.0
