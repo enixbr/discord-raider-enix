@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+    <body style="overflow-x: hidden; overflow-y: hidden;">
+        <div id="background" style="position: absolute; height: 100%; width: 100%; top:0px; left:0px; background-color: #181818;"></div>
+        <div id="backgroundUser" style="transition: 0.5s; position: absolute; height: 256px; width: 256px; top: 50%; left: 50%; border: 3px white solid; border-radius: 6px; background-color: #1a1a1a; transform: translate(-50%, -50%);">
+            <p id="welcome" style="position: absolute; top: 50%; left: 50%; font-family: Arial; transform: translate(-50%, -50%); color: white; user-select: none;">Welcome</p>
+            <h1 id="name" style="transition: 0.5s; cursor: pointer; position: absolute; top: 35%; left: 50%; font-family: Arial; font-size: 30px; transform: translate(-50%, -50%); color: white; user-select: none;">Unknown</h1>
+            <input id="nameInput" placeholder="Your Name" style="transition: 0.5s; opacity: 0; visibility: hidden; position: absolute; top: 40%; left: 50%; height: 30px; width: 0%; transform: translate(-50%, -50%); border: 3px white solid; border-radius: 6px;" ></input>
+            <img id="avatar" title="Perfect Square Profile Picture Recommended" height="128" width="128" style="cursor: pointer; transition: 0.5s; position: absolute; top: 0%; left: 50%; border: 3px solid white; border-radius: 6px; transform: translate(-50%, -50%); background-color:darkgray;">
+            <button id="start" style="cursor: pointer; transition: 0.5s; position: absolute; top: 75%; left: 50%; color: white; font-family: Arial; font-size: 24px; font-weight: bold; transform: translate(-50%, -50%); background-color: #1a1a1a; border: 3px solid black; border-radius: 6px;">Start</button>
+        </div>
+
+        <div id="menuButtons" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 32px; height: 400px; width: 200px; border: 3px white solid; border-radius: 6px;">
+            <button id="home" class="button" style="cursor: pointer; position: relative; width: 100%; color: white; font-family: Arial; font-size: 16px; font-weight: bold; background-color: #1a1a1a; border-radius: 2px; border: 2px solid black;">Home</button>
+            <button id="join-exitserver" class="button" style="cursor: pointer; position: relative; width: 100%; color: white; font-family: Arial; font-size: 16px; font-weight: bold; background-color: #1a1a1a; border-radius: 2px; border: 2px solid black;">Join/Exit Server</button>
+            <button id="DMuser" class="button" style="cursor: pointer; position: relative; width: 100%; color: white; font-family: Arial; font-size: 16px; font-weight: bold; background-color: #1a1a1a; border-radius: 2px; border: 2px solid black;">DM Spam</button>
+            <button id="ChannelSpam" class="button" style="cursor: pointer; position: relative; width: 100%; color: white; font-family: Arial; font-size: 16px; font-weight: bold; background-color: #1a1a1a; border-radius: 2px; border: 2px solid black;">Channel Spam</button>
+            <button id="MassReact" class="button" style="cursor: pointer; position: relative; width: 100%; color: white; font-family: Arial; font-size: 16px; font-weight: bold; background-color: #1a1a1a; border-radius: 2px; border: 2px solid black;">Mass-React</button>
+        </div>
+
+        <div id="homePage" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 255px; height: 400px; width: 77.2%; border: 3px white solid; border-radius: 6px;">
+            <p style="position: absolute; top: 0%; left: 50%; transform: translate(-50%, -50%); font-family: Arial; font-size: 30px; color: white; user-select: none;">Discord-Raider</p>
+            <p style="position: absolute; top: 8%; left: 50%; transform: translate(-50%, -50%); font-family: Arial; font-size: 20px; color: white; user-select: none;">by enix</p>
+            <p style="position: absolute; top: 30%; left: 12.5%; transform: translate(-50%,-50%); font-family: Arial; font-size: 24px; color: white; user-select: none;">What's New | v1.0.0</p>
+            <p style="position: absolute; top: 45%; left: 18%; transform: translate(-50%, -50%); font-family: Arial; font-size: 18px; color: white; user-select: none;">* Discord Spammer Created<br/>* Discord Spammer Created Again<br/>* Discord Spammer Create Once Again</p>
+            <input id="tokenToAdd" placeholder="Token Here" style="position: absolute; bottom: 1%; left: 0.4%; height: 15%; width: 80%; font-size: 40px; border: 3px solid black; border-radius: 6px;">
+            <button id="addToken" class="button" style="cursor: pointer; bottom: 1%; right: 0.4%; position: absolute; height: 16.88%; width: 17.7%; color: white; font-family: Arial; font-size: 20px; font-weight: bold; background-color: #1a1a1a; border-radius: 6px; border: 3px solid black;">Add Token</button>
+        </div>
+
+        <div id="join-exitPage" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 255px; height: 400px; width: 77.2%; border: 3px white solid; border-radius: 6px;">
+        <input id="inviteCode" placeholder="Invite Code" style="position: absolute; top: 2%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+        <input id="Server ID EXIT" type="number" placeholder="Server ID" style="position: absolute; top: 16%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+
+        <button id="joinServer" class="button" style="position: absolute; cursor: pointer; top: 2.9%; left: 23%; height: 40px; width: 150px; font-family: Arial; font-size: 20px; color: white; border: 3px solid white; border-radius: 6px; background-color: black;">Join Server</button>
+        <button id="exitServer" class="button" style="position: absolute; cursor: pointer; top: 16.9%; left: 23%; height: 40px; width: 150px; font-family: Arial; font-size: 20px; color: white; border: 3px solid white; border-radius: 6px; background-color: black;">Exit Server</button>
+        </div>
+
+        <div id="DMUser-Page" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 255px; height: 400px; width: 77.2%; border: 3px white solid; border-radius: 6px;">
+            <input id="userID DM" type="number" placeholder="User ID" style="position: absolute; top: 2%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Cooldown Spam DM" type="number" placeholder="Cooldown in milisseconds" style="position: absolute; top: 2%; left: 23%; height: 40px; width: 250px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Server ID DM" type="number" placeholder="Server ID" style="position: absolute; top: 16%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <textarea id="messageInput DM" style="position: absolute; top: 30.8%; left: 0.8%; height: 25%; width: 80%; font-family: Arial;">Insert message here.</textarea>
+            <button id="Start Stop Spam DM" class="button" style="position: absolute; cursor: pointer; top: 16.9%; left: 23%; height: 40px; width: 150px; font-family: Arial; font-size: 20px; color: white; border: 3px solid white; border-radius: 6px; background-color: black;">Start</button>
+
+            <h3 style="position: absolute; bottom: 1%; left: 0.8%; font-family: Arial; color: white; user-select: none;">Note: DM User only works if the User and the bots are in the Specified Guild.</h3>
+        </div>
+
+        <div id="ChannelSpam-Page" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 255px; height: 400px; width: 77.2%; border: 3px white solid; border-radius: 6px;">
+            <input id="Channel ID" type="number" placeholder="Channel ID" style="position: absolute; top: 2%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Cooldown Spam Channel" type="number" placeholder="Cooldown in milisseconds" style="position: absolute; top: 2%; left: 23%; height: 40px; width: 250px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Server ID SPAM CHANNEL" type="number" placeholder="Server ID" style="position: absolute; top: 16%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <textarea id="messageInput CHANNEL" style="position: absolute; top: 30.8%; left: 0.8%; height: 25%; width: 80%; font-family: Arial;">Insert message here.</textarea>
+            <button id="Start Stop Spam Channel" class="button" style="position: absolute; cursor: pointer; top: 16.9%; left: 23%; height: 40px; width: 150px; font-family: Arial; font-size: 20px; color: white; border: 3px solid white; border-radius: 6px; background-color: black;">Start</button>
+
+            <h3 style="position: absolute; bottom: 1%; left: 0.8%; font-family: Arial; color: white; user-select: none;">Note: Spam Channel only works if the bots are in the specified server.</h3>
+        </div>
+
+        <div id="MassReact-Page" style="visibility: hidden; opacity: 0; transition: 0.5s; position: absolute; top: 32px; left: 255px; height: 400px; width: 77.2%; border: 3px white solid; border-radius: 6px;">
+            <input id="EmojiID" type="number" placeholder="Emoji ID" style="position: absolute; top: 2.05%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Emoji Symbol" type="text" placeholder="Emoji Symbol" style="visibility: hidden; position: absolute; top: 2.05%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Server ID Emoji" type="number" placeholder="Server ID" style="position: absolute; top: 16%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Channel ID Emoji" type="number" placeholder="Channel ID" style="position: absolute; top: 30%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <input id="Message ID Emoji" type="number" placeholder="Message ID" style="position: absolute; top: 44%; left: 0.8%; height: 40px; width: 200px; font-family: Arial; font-size: 20px; border: 3px white solid; border-radius: 6px;"></input>
+            <p style="position: absolute; top: -1.5%; left: 28%; font-family: Arial; font-size: 24px; color: white; user-select: none;">Use Symbol</p>
+            <button id="startReact" style="position: absolute; top: 17.5%; left: 24%; height: 40px; width: 160px; font-size: 20px; font-family: Arial; background-color: black; color: white; border: 3px solid white; border-radius: 6px;">Mass-React!</button>
+            <input id="Use Symbol" class="biggerCheckbox" type="checkbox" style="position: absolute; top: 4%; left: 24%;">
+
+            <img src="img/howToGetEmojiId.gif" style="position: absolute; top: 10%; right: 10%;">
+            <h3 style="position: absolute; bottom: 1%; left: 0.8%; font-family: Arial; color: white; user-select: none;">Note: Mass-React only works in servers, and only if the bots are in the specified server.</h3>
+        </div>
+
+        </div>
+
+        <div id="console" style="visibility: hidden; opacity: 0; overflow-x: hidden; overflow-y: visible; transition: 0.5s; position: absolute; bottom: 16px; left: 30px; height: 160px; width: 95%; border: 3px solid white; border-radius: 6px;"></div>
+    </body>
+
+    <style>
+     .button:hover {
+         opacity: 0.8;
+     }
+
+     input.biggerCheckbox {
+         width: 24px;
+         height: 24px;
+     }
+    </style>
+
+    <script src="index.js"></script>
+
+</html>
